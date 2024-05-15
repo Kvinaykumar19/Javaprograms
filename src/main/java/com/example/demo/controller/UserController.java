@@ -24,10 +24,7 @@ public class UserController {
 	@Autowired
 	private UserDataService userDataService;
 
-	@GetMapping("/hai")
-	public String sayhai() {
-		return "HAI TO ALL ";
-	}
+
 
 	@PostMapping("/save")
 	public ResponseEntity<UserDisplayDto> saveUser(@RequestBody UserDto userDto) {

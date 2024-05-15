@@ -24,7 +24,6 @@ public class UserDataServiceImpl implements UserDataService {
 
 	@Override
 	public UserDisplayDto saveUserDto(UserDto dto) {
-		//log.info("USER DATA  : {} ", dto);
 		UserDataEntity entity = new UserDataEntity();
 		entity.setAddres(dto.getAddres());
 		entity.setMobileno(dto.getMobileno());
