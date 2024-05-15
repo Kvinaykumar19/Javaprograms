@@ -39,10 +39,7 @@ public class UserDataServiceImpl implements UserDataService {
 
 	@Override
 	public List<UserDisplayDto> getAllUserDtos() {
-		// TODO Auto-generated method stub
-		return repositry.findAll().stream().filter(i -> i.getRecodStatus().equals("ACTIVE")).map(i -> {
-			return mapEntityToDto(i);
-		}).toList();
+		return repositry.findAll().stream().filter(i -> i.getRecodStatus().equals("ACTIVE")).map(UserDataServiceImpl::mapEntityToDto).toList();
 	}
 
 	public static UserDisplayDto mapEntityToDto(UserDataEntity entity) {
